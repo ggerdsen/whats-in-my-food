@@ -1,0 +1,11 @@
+<h1>Number of items returned for a search of <%=@q%>: <%=@total_results%></h1>
+
+<h2>10 results that contain your search string:</h2>
+
+<%@search.first(10).each do |food|%>
+  <h3>Description: <%=food.description%></h3>
+  <p>GTIN/UPC code: <%=food.code%></p>
+  <p>Brand Owner: <%=food.brand_owner%></p>
+  <p>Ingredients: <%=food.ingredients%></p>
+<%end%>
+
