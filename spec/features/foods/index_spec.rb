@@ -7,6 +7,9 @@ RSpec.describe "Index" do
       expect(page).to have_button("Search")
       fill_in :q, with: "sweet potatoes"
       click_on "Search"
+      
+      expect(page).to have_content("Number of items returned for a search of sweet potatoes: 38680")
+      
       #first result
       expect(current_path).to eq("/foods")
       expect(page).to have_content("Description: SWEET POTATOES")
