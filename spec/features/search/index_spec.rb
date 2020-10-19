@@ -19,7 +19,6 @@ RSpec.describe "Index" do
       expect(page).to have_content("GTIN/UPC code: 095829400193")
       expect(page).to have_content("Brand Owner: C.H. Robinson Company")
       expect(page).to have_content("Ingredients: ORGANIC SWEET POTATOES")
-      # expect(page).to have_content("")
     end
   end
 end
