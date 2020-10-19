@@ -1,0 +1,11 @@
+<h1>Number of items returned for a search of <%=@q%>: <%=@parsed[:totalHits]%></h1>
+
+<h2>10 results that contain your search string</h2>
+
+<%@parsed[:foods].first(10).each do |food|%>
+  <h3>Description: <%=food[:description]%></h3>
+  <p>GTIN/UPC code: <%=food[:gtinUpc]%></p>
+  <p>Brand Owner: <%=food[:brandOwner]%></p>
+  <p>Ingredients: <%=food[:ingredients]%></p>
+<%end%>
+
