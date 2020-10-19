@@ -9,4 +9,9 @@ class FoodFacade
       Food.new(data)
     end
   end
+  
+  def total_hits(search_string)
+    results = @food_data.search(search_string)
+    results.first[:totalHits]
+  end
 end
